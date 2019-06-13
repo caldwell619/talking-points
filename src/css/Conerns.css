@@ -7,3 +7,20 @@
 .block-text {
 	width: 100%;
 }
+.media-cont {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.media-cont video,
+.media-cont img {
+	margin: 15px;
+}
+
+.media-cont img {
+	cursor: zoom-in;
+}
+
+.modal-img {
+	height: 80vh;
+}

@@ -10,6 +10,7 @@ import {
 } from '../static/content';
 import AccessPatterns from '../concerns/AccessPatterns';
 import BrokenEndpoints from '../concerns/BrokenEndpoints';
+import Ux from '../concerns/Ux';
 import Main from '../content/Main';
 import '../css/Conerns.css';
 
@@ -64,9 +65,7 @@ const Router = props => {
 			/>
 			<Route
 				path="/ux"
-				render={routeProps => (
-					<Page content={businessContent} title="Business Requirements" />
-				)}
+				render={routeProps => <Page content={Ux} title="UX Snags" />}
 			/>
 			<Route path="/" render={routeProps => <Main />} />
 		</Switch>

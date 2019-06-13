@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
 	appBar: {
 		width: `100`,
 		marginLeft: drawerWidth,
-		zIndex: 10000
+		zIndex: 1300
 	},
 	drawer: {
 		width: drawerWidth,

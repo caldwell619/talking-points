@@ -19,3 +19,7 @@ a {
 .divider {
 	margin: 10px 0 !important;
 }
+
+.modal {
+	z-index: 1000000000000000000;
+}
