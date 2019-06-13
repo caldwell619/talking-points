@@ -13,7 +13,7 @@ export const topRoutes = [
 		linkText: 'Auth'
 	},
 	{
-		link: '/middle-ware',
+		link: '/middleware',
 		icon: <Middleware />,
 		linkText: 'Middleware'
 	},

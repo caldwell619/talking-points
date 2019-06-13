@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/Inbox';
 import { Link } from 'react-router-dom';
 
 const HeaderItem = ({ link, icon, linkText }) => {

@@ -1,16 +1,14 @@
-/* Global Styles */
 a {
 	text-decoration: none;
 	color: black;
 }
 
-/* Main - Root */
-.main {
-	margin-left: 240px;
-	margin-top: 70px;
-	width: calc(100% - 240px);
-	height: calc(100vh - 70px);
+main {
+	height: calc(100vh -70px);
+	width: calc(100% -240px);
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin-left: 240px;
+	margin-top: 70px;
 }

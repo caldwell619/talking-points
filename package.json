@@ -10,13 +10,17 @@
 	"dependencies": {
 		"@material-ui/core": "^4.1.0",
 		"@material-ui/icons": "^4.1.0",
-		"http-proxy": "^1.17.0",
+		"axios": "^0.19.0",
+		"http-proxy-middleware": "^0.19.1",
+		"i": "^0.3.6",
+		"npm": "^6.9.0",
 		"prop-types": "^15.7.2",
 		"react": "^16.8.6",
 		"react-dom": "^16.8.6",
 		"react-router": "^5.0.1",
 		"react-router-dom": "^5.0.1",
-		"react-scripts": "3.0.1"
+		"react-scripts": "3.0.1",
+		"request": "^2.88.0"
 	},
 	"eslintConfig": {
 		"extends": "react-app"

@@ -8,7 +8,7 @@ import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import HeaderItem from './HeaderItem';
-import { topRoutes, bottomRoutes } from '../static/routes';
+import { topRoutes, bottomRoutes } from '../router/routes';
 import Home from '@material-ui/icons/Home';
 
 const drawerWidth = 240;
