@@ -1,20 +1,30 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Page from '../content/Page';
-import { docsContent } from '../static/content';
+import {
+	docsContent,
+	authContent,
+	communicationContent,
+	middlewareContent,
+	businessContent
+} from '../static/content';
+import AccessPatterns from '../concerns/AccessPatterns';
+import BrokenEndpoints from '../concerns/BrokenEndpoints';
+import Main from '../content/Main';
+import '../css/Conerns.css';
 
 const Router = props => {
 	return (
 		<Switch>
 			<Route
 				path="/auth"
-				render={routeProps => <Page content={docsContent} title="Auth Flow" />}
+				render={routeProps => <Page content={authContent} title="Auth Flow" />}
 			/>
 			<Route
 				path="/middleware"
 				render={routeProps => (
 					<Page
-						content={docsContent}
+						content={middlewareContent}
 						title="Middleware at a Foundational Level"
 					/>
 				)}
@@ -26,23 +36,39 @@ const Router = props => {
 				)}
 			/>
 			<Route
+				path="/broken"
+				render={routeProps => (
+					<Page content={BrokenEndpoints} title="Broken Lambdas" />
+				)}
+			/>
+			<Route
 				path="/comms"
 				render={routeProps => (
-					<Page content={docsContent} title="Consistent Communication" />
+					<Page
+						content={communicationContent}
+						title="Consistent Communication"
+					/>
 				)}
 			/>
 			<Route
 				path="/access"
 				render={routeProps => (
-					<Page content={docsContent} title="Future Access Patterns" />
+					<Page content={AccessPatterns} title="Future Access Patterns" />
 				)}
 			/>
 			<Route
 				path="/business-needs"
 				render={routeProps => (
-					<Page content={docsContent} title="Business Requirements" />
+					<Page content={businessContent} title="Business Requirements" />
 				)}
 			/>
+			<Route
+				path="/ux"
+				render={routeProps => (
+					<Page content={businessContent} title="Business Requirements" />
+				)}
+			/>
+			<Route path="/" render={routeProps => <Main />} />
 		</Switch>
 	);
 };

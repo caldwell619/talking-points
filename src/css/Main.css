@@ -1,0 +1,11 @@
+.main-root {
+	width: 70%;
+	height: 70vh;
+}
+.main-title {
+	text-align: center;
+}
+
+.main-block {
+	margin: 10vh 0 !important;
+}

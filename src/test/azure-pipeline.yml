@@ -1,0 +1,45 @@
+# Node.js with Vue
+
+# Which branch the pipeline will trigger on
+trigger:
+  - master
+
+# Build Stages
+stages:
+  - stage: Configure
+    jobs:
+      - job: Setup
+        pool:
+          vmImage: 'Ubuntu-16.04' # defines runtime
+
+  - stage: Build
+    jobs:
+      - job: Build_and_Test
+        steps:
+          - script: |
+              npm install
+              npm run test
+              npm run build
+            displayName: 'Building for Production'
+          - task: PublishPipelineArtifact@0
+            inputs:
+              artifactName: 'ui-build'
+              targetPath: './dist'
+
+  - stage: Deploy
+    jobs:
+      - job: Deploy_To_Bucket
+        steps:
+          - task: DownloadPipelineArtifact@0
+            inputs:
+              artifactName: 'ui-build'
+              targetPath: $(System.DefaultWorkingDirectory)
+          - script: mkdir dist && mv index.html favicon.ico css/ js/ img/ ./dist/
+          - task: S3Upload@1 # configured at the account level - no secrets in vcs
+            inputs:
+              awsCredentials: 'personal'
+              regionName: 'us-east-1'
+              bucketName: 'trial-application'
+              sourceFolder: './dist'
+              globExpressions: '**'
+              filesAcl: 'public-read-write'

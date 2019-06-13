@@ -3,12 +3,19 @@ a {
 	color: black;
 }
 
-main {
-	height: calc(100vh -70px);
-	width: calc(100% -240px);
+.root {
+	height: 100vh;
+}
+.main {
+	height: calc(100vh - 70px);
+	width: calc(100% - 250px);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	margin-left: 240px;
 	margin-top: 70px;
+}
+
+.divider {
+	margin: 10px 0 !important;
 }
