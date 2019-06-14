@@ -8,7 +8,7 @@ class App extends Component {
 	async poke() {
 		try {
 			const res = await axios.get(
-				'/institution/9a175661-f00d-4697-9b6e-f80bb4a06964'
+				'/institution/INSTITUTION_ID'
 			);
 			console.log(res);
 		} catch (error) {
