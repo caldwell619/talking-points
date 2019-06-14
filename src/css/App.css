@@ -3,6 +3,10 @@ a {
 	color: black;
 }
 
+.blue-link {
+	color: blue;
+}
+
 .root {
 	height: 100vh;
 }

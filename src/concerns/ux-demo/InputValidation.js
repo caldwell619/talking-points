@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../../css/Conerns.css';
-import PropTypes from 'prop-types';
 import { Typography } from '@material-ui/core';
 const validate1 = require('../../assets/videos/validate-1.mov');
 const validate2 = require('../../assets/videos/validate-2.mov');
@@ -40,7 +39,7 @@ class InputValidation extends Component {
 				<div className="media-cont">
 					<video src={validate1} width="480" controls />;
 					<video src={validate2} width="480" controls />;
-					<video src={validate3} width="480" controls />;
+					<video src={validate3} width="480" controls />
 				</div>
 			</div>
 		);

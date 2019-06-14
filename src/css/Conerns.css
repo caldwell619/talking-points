@@ -24,3 +24,8 @@
 .modal-img {
 	height: 80vh;
 }
+
+.links-cont {
+	display: flex;
+	justify-content: space-evenly;
+}

@@ -4,6 +4,11 @@ import Page from '../content/Page';
 import AccessPatterns from '../concerns/AccessPatterns';
 import BrokenEndpoints from '../concerns/BrokenEndpoints';
 import Ux from '../concerns/Ux';
+import BusinessReqs from '../concerns/BusinessReqs';
+import Auth from '../concerns/Auth';
+import Docs from '../concerns/Docs';
+import Communication from '../concerns/Communication';
+import Middleware from '../concerns/Middleware';
 import FollowThrough from '../concerns/follow-through/FollowThrough';
 import Main from '../content/Main';
 import '../css/Conerns.css';
@@ -13,15 +18,13 @@ const Router = props => {
 		<Switch>
 			<Route
 				path="/auth"
-				render={routeProps => (
-					<Page content={AccessPatterns} title="Auth Flow" />
-				)}
+				render={routeProps => <Page content={Auth} title="Auth Flow" />}
 			/>
 			<Route
 				path="/middleware"
 				render={routeProps => (
 					<Page
-						content={AccessPatterns}
+						content={Middleware}
 						title="Middleware at a Foundational Level"
 					/>
 				)}
@@ -29,7 +32,7 @@ const Router = props => {
 			<Route
 				path="/docs"
 				render={routeProps => (
-					<Page content={AccessPatterns} title="Existing Documentation" />
+					<Page content={Docs} title="Existing Documentation" />
 				)}
 			/>
 			<Route
@@ -41,7 +44,7 @@ const Router = props => {
 			<Route
 				path="/comms"
 				render={routeProps => (
-					<Page content={AccessPatterns} title="Consistent Communication" />
+					<Page content={Communication} title="Consistent Communication" />
 				)}
 			/>
 			<Route
@@ -53,7 +56,7 @@ const Router = props => {
 			<Route
 				path="/business-needs"
 				render={routeProps => (
-					<Page content={AccessPatterns} title="Business Requirements" />
+					<Page content={BusinessReqs} title="Business Requirements" />
 				)}
 			/>
 			<Route
