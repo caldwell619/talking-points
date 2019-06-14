@@ -6,6 +6,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import InputValidation from './ux-demo/InputValidation';
+import ResetPassword from './ux-demo/ResetPassword';
 import Responsiveness from './ux-demo/Responsiveness';
 
 function TabContainer(props) {
@@ -55,7 +56,11 @@ export default function Ux() {
 					<Tab label="Responsiveness" />
 				</Tabs>
 			</AppBar>
-			{value === 0 && <TabContainer>Item One</TabContainer>}
+			{value === 0 && (
+				<TabContainer>
+					<ResetPassword />
+				</TabContainer>
+			)}
 			{value === 1 && <TabContainer>Item Two</TabContainer>}
 			{value === 2 && <TabContainer>Item Three</TabContainer>}
 			{value === 3 && <TabContainer>Item Four</TabContainer>}

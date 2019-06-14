@@ -7,6 +7,7 @@ import Assignment from '@material-ui/icons/Assignment';
 import Phone from '@material-ui/icons/PhonelinkRing';
 import Cloud from '@material-ui/icons/CloudOutlined';
 import Build from '@material-ui/icons/Build';
+import CloudDone from '@material-ui/icons/CloudDone';
 
 export const topRoutes = [
 	{
@@ -50,5 +51,10 @@ export const bottomRoutes = [
 		link: '/ux',
 		icon: <Person />,
 		linkText: 'UX Concerns'
+	},
+	{
+		link: '/follow-through',
+		icon: <CloudDone />,
+		linkText: 'Follow Through'
 	}
 ];

@@ -1,11 +1,11 @@
 import React, { Component, Fragment } from 'react';
-import '../../css/Conerns.css';
 // import PropTypes from 'prop-types';
 import { Typography } from '@material-ui/core';
 import ImgPopout from '../../util/ImgPopout';
 const camera = require('../../assets/screen-shots/camera.png');
+const ux1 = require('../../assets/videos/ux-1.mov');
 
-class ResetPassword extends Component {
+class FollowThroughContent extends Component {
 	state = {
 		isPopoutShown: false,
 		imageToShow: ''
@@ -20,19 +20,25 @@ class ResetPassword extends Component {
 			<Fragment>
 				<div>
 					<Typography variant="h6" className="spacer">
-						As of today, there are no interfaces in which a user can reset their
-						password
+						From our perspective, there is little attention given to detail.
 					</Typography>
 					<Typography variant="body1" className="bottom-spacer">
-						Not only is the endpoint to request a password reset broken, there
-						are no screens available to do so.
+						Several ascpects of Bacon Loan Pay have been simply copied and
+						pasted into the architecture of this application
 						<br />
-						Users cannot set their own password, and therefore cannot return
-						after local storage has been erased. Many people delete their
-						browsing history, which is configured to erase cached data.
-						<br />A user would not know their password, and even a support agent
-						wouldn't be able to help them since they are stored as encrypted
-						values.
+						This wouldn't be a problem, save for the fact this app is not using
+						them. Increasing the size of the application and resource
+						consumption on AWS slows performance and increases cost.
+						<br />
+					</Typography>
+					<Typography variant="h6" className="spacer">
+						The Problem
+					</Typography>
+					<Typography variant="body1" className="bottom-spacer">
+						This application is incomplete. Errors in the API are handled with
+						native browser alerts with ambigous error messages.
+						<br />
+						<br />
 					</Typography>
 
 					<div>
@@ -49,6 +55,7 @@ class ResetPassword extends Component {
 								this.setState({ isPopoutShown: true, imageToShow: camera })
 							}
 						/>
+						<video src={ux1} width="480" controls />;
 					</div>
 				</div>
 				<ImgPopout
@@ -63,4 +70,4 @@ class ResetPassword extends Component {
 	}
 }
 
-export default ResetPassword;
+export default FollowThroughContent;
