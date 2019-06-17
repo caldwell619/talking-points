@@ -1,15 +1,20 @@
-# Node.js with React
+# Master Monolithic Pipeline
 
 trigger:
   - master
 
-pool:
-  vmImage: 'ubuntu-latest'
+stages:
+  - stage: Configure
+    jobs:
+      - job: Setup
+        pool:
+          vmImage: 'Ubuntu-16.04' # defines runtime
 
-stages: 
- - stage: Build
-  steps:
-    - script: |
-        npm install
-        npm run build
-      displayName: 'npm install and build'
+  - stage: Testing
+    jobs:
+      - job: Run_Tests
+        steps:
+          - script: |
+              npm install
+              npm run test
+            displayName: 'Running Test'

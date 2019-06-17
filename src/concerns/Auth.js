@@ -1,37 +1,62 @@
-import React from 'react';
-import { Typography, Divider } from '@material-ui/core';
-import DropDown from '../util/DropDown';
+import React, { Fragment } from 'react';
+import {
+	Typography,
+	Divider,
+	List,
+	ListItemText,
+	ListItem
+} from '@material-ui/core';
+import ImgPopout from '../util/ImgPopout';
 
 const Auth = () => (
-	<div>
-		<Typography variant="h6">
-			Our primary concern is that accepting a product that has broken Lambdas
-			accrues a great deal of technical debt.
-		</Typography>
-		<Divider className="divider" />
-		<Typography variant="body1" className="bottom-spacer" />
-		<Typography variant="h6" className="spacer">
-			The Problem
-		</Typography>
-		<Typography variant="body1" className="spacer bottom-spacer">
-			By accepting Lambdas that are broken / unrelated to the product, you
-			assume technical debt that will require dev time to fix. <br />
-			Starting off the release with technical debt spells doom for the future.
-			<br />
-		</Typography>
-		<Typography variant="h6" className="spacer">
-			Potential Solutions
-		</Typography>
-		<Typography variant="body1" className="spacer bottom-spacer">
-			Moving forward, the solution would be to prune the Lambdas that are not
-			relevant to the project, and fix the ones that are.
-			<br />
-		</Typography>
+	<Fragment>
 		<div>
-			<Typography variant="h6">List of Lambdas</Typography>
+			<Typography variant="h6">
+				As it stands, there is no authentication being done in this application.
+			</Typography>
+			<Typography variant="body1" className="bottom-spacer">
+				Any form of auth is being done strictly from local storage. There is{' '}
+				<strong>NO</strong> way to log in on your own.
+			</Typography>
+			<Typography variant="h6" className="spacer">
+				The Problem
+			</Typography>
+			<Typography variant="body1" className="">
+				The way this application is structures is as follows:
+				<br />
+			</Typography>
+			<Typography variant="body1" className="">
+				<ul>
+					<li>
+						Users initially come to a splash page in which they are asked for an
+						email address
+					</li>
+					<li>
+						Upon entering an email (could be <em>a@b.asaa</em> ), they are given
+						a token which grants access to several endpoints, including a
+						pass-through to Unity.
+					</li>
+					<li>
+						This token does expire, however, the UI is configured to
+						automatically refresh the token. It does this without prompt from
+						the user.
+					</li>
+					<li>After getting this token, </li>
+					<li />
+					<li />
+				</ul>
+			</Typography>
+			<Typography variant="h6" className="spacer">
+				Potential Solutions
+			</Typography>
+			<Typography variant="body1" className="spacer bottom-spacer">
+				A clearer understanding of the Business Requriements is needed. We have
+				ideas about fixing what is in place, but if thats the intent, then we
+				don't need to fix anything.
+				<br />
+			</Typography>
 		</div>
-		<Divider className="divider" />
-	</div>
+	</Fragment>
 );
 
 export default Auth;

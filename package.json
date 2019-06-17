@@ -20,7 +20,17 @@
 		"react-scripts": "3.0.1"
 	},
 	"eslintConfig": {
-		"extends": "react-app"
+		"extends": [
+			"react-app",
+			"eslint:recommended",
+			"plugin:react/recommended"
+		],
+		"rules": {
+			"no-extra-parens": "all",
+			"quotes": "double",
+			"no-var": "error",
+			"prefer-const": "error"
+		}
 	},
 	"browserslist": {
 		"production": [
@@ -33,5 +43,8 @@
 			"last 1 firefox version",
 			"last 1 safari version"
 		]
+	},
+	"devDependencies": {
+		"eslint": "^5.16.0"
 	}
 }

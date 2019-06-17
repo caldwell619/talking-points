@@ -13,6 +13,10 @@ app.get('/institution/test', async (req, res) => {
 		res.send(error);
 	}
 });
+app.get('/test', (req, res) => {
+	console.log(Math.random() * 10);
+	res.send('hey');
+});
 
 const PORT = process.env.NODE_ENV === 'production' || 5000;
 app.listen(PORT, () => {
