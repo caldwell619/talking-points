@@ -20,7 +20,10 @@ class ResetPassword extends Component {
 			<Fragment>
 				<div>
 					<Typography variant="h6" className="spacer">
-						As of today, there are no interfaces in which a user can reset their password
+						As of today, there are no interfaces in which a user can reset their password.
+						<br />
+						The <code>resetPassword</code> and <code>passwordResetRequest</code> lambdas are blank
+						files.
 					</Typography>
 					<Typography variant="body1" className="bottom-spacer">
 						Not only is the endpoint to request a password reset currently broken, there are no
