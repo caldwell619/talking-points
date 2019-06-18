@@ -30,6 +30,6 @@ module.exports = async (token, userId) => {
 			console.log('Successfully associated car..');
 		})
 		.catch(error => {
-			console.log('error: \n\n', error);
+			console.log('error: \n\n\n', error);
 		});
 };
