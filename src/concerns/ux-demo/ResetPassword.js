@@ -20,9 +20,8 @@ class ResetPassword extends Component {
 			<Fragment>
 				<div>
 					<Typography variant="h6" className="spacer">
-						As of today, there are no interfaces in which a user can reset their password.
-						<br />
-						The <code>resetPassword</code> and <code>passwordResetRequest</code> lambdas are blank
+						As of today, there are no interfaces in which a user can reset their password. The{' '}
+						<code>resetPassword</code> and <code>passwordResetRequest</code> lambdas are blank
 						files.
 					</Typography>
 					<Typography variant="body1" className="bottom-spacer">
@@ -65,9 +64,9 @@ class ResetPassword extends Component {
 					</div>
 				</div>
 				<ImgPopout
-					isOpen={this.state.isPopoutShown}
+					isPopupShown={this.state.isPopoutShown}
 					handleClose={this.handleClose}
-					imgSrc={this.state.imageToShow}
+					imageToShow={this.state.imageToShow}
 					altText="bad media query"
 					title="Improper Media Query"
 				/>

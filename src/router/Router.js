@@ -16,58 +16,37 @@ import '../css/Conerns.css';
 const Router = props => {
 	return (
 		<Switch>
-			<Route
-				path="/auth"
-				render={routeProps => <Page content={Auth} title="Auth Flow" />}
-			/>
+			<Route path="/auth" render={routeProps => <Page content={<Auth />} title="Auth Flow" />} />
 			<Route
 				path="/middleware"
 				render={routeProps => (
-					<Page
-						content={Middleware}
-						title="Middleware at a Foundational Level"
-					/>
+					<Page content={<Middleware />} title="Middleware at a Foundational Level" />
 				)}
 			/>
 			<Route
 				path="/docs"
-				render={routeProps => (
-					<Page content={Docs} title="Existing Documentation" />
-				)}
+				render={routeProps => <Page content={<Docs />} title="Existing Documentation" />}
 			/>
 			<Route
 				path="/broken"
-				render={routeProps => (
-					<Page content={BrokenEndpoints} title="Broken Lambdas" />
-				)}
+				render={routeProps => <Page content={<BrokenEndpoints />} title="Broken Lambdas" />}
 			/>
 			<Route
 				path="/comms"
-				render={routeProps => (
-					<Page content={Communication} title="Consistent Communication" />
-				)}
+				render={routeProps => <Page content={<Communication />} title="Consistent Communication" />}
 			/>
 			<Route
 				path="/access"
-				render={routeProps => (
-					<Page content={AccessPatterns} title="Future Access Patterns" />
-				)}
+				render={routeProps => <Page content={<AccessPatterns />} title="Future Access Patterns" />}
 			/>
 			<Route
 				path="/business-needs"
-				render={routeProps => (
-					<Page content={BusinessReqs} title="Business Requirements" />
-				)}
+				render={routeProps => <Page content={<BusinessReqs />} title="Business Requirements" />}
 			/>
-			<Route
-				path="/ux"
-				render={routeProps => <Page content={Ux} title="UX Snags" />}
-			/>
+			<Route path="/ux" render={routeProps => <Page content={<Ux />} title="UX Snags" />} />
 			<Route
 				path="/follow-through"
-				render={routeProps => (
-					<Page content={FollowThrough} title="Follow Through" />
-				)}
+				render={routeProps => <Page content={<FollowThrough />} title="Follow Through" />}
 			/>
 			<Route path="/" render={routeProps => <Main />} />
 		</Switch>

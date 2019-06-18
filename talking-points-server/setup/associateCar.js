@@ -1,20 +1,22 @@
 'use strict';
+const axios = require('axios');
+const { baseUrl, vin } = require('../keys');
+const flags = {
+	commercialUse: false,
+	certifiedPreowned: false,
+	secondOwner: false,
+	hasLiftKitOrOversizeTires: false,
+	modifiedVehicle: false,
+	isSalvageTitle: false
+};
+const odometer = 10000;
 
 module.exports = async (token, userId) => {
-	const axios = require('axios');
-	const { baseUrl, vin } = require('../keys');
+	setTimeout(() => {
+		console.log('Attempting to associate car with user..\n');
+	}, 100);
 	const targetUrl = `${baseUrl}/${userId}/car`;
-	const flags = {
-		commercialUse: false,
-		certifiedPreowned: false,
-		secondOwner: false,
-		hasLiftKitOrOversizeTires: false,
-		modifiedVehicle: false,
-		isSalvageTitle: false
-	};
-	const odometer = 10000;
-	console.log('Attempting to associate car with user..');
-	axios({
+	const options = {
 		method: 'post',
 		url: targetUrl,
 		headers: {
@@ -25,11 +27,13 @@ module.exports = async (token, userId) => {
 			flags,
 			odometer
 		}
-	})
+	};
+	axios(options)
 		.then(res => {
-			console.log('Successfully associated car..');
+			console.log('Successfully associated car..\n');
 		})
 		.catch(error => {
 			console.log('error: \n\n\n', error);
+			process.exit(1);
 		});
 };

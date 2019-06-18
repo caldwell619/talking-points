@@ -23,5 +23,15 @@ export default [
 		url:
 			'http://p-apptfsalm1:8080/tfs/AppDevScrum/Marketplace/_git/mkt-web-ui?path=%2Fsrc%2Fviews%2FEditing.vue&version=GBmaster',
 		text: 'FooBar inside of "Production Ready" code'
+	},
+	{
+		url:
+			'http://p-apptfsalm1:8080/tfs/AppDevScrum/Marketplace/_git/mkt-web-api?path=%2Fsrc%2FUser%2FPasswordReset%2Findex.js&version=GBmaster',
+		text: 'Empty Password Reset Lambda'
+	},
+	{
+		url:
+			'http://p-apptfsalm1:8080/tfs/AppDevScrum/Marketplace/_git/mkt-web-api?path=%2Fsrc%2FUser%2FPasswordResetRequest%2Findex.js&version=GBmaster',
+		text: 'Empty Password Reset Request Lambda'
 	}
 ];

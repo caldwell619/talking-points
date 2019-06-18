@@ -23,7 +23,7 @@ const AccessPatterns = () => (
 			the same partition.
 			<br />
 		</Typography>
-		<Typography variant="body1" className="spacer bottom-spacer">
+		<Typography variant="body1" component="div" className="spacer bottom-spacer">
 			<a
 				href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/bp-partition-key-uniform-load.html"
 				target="_blank"

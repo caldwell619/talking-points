@@ -9,3 +9,17 @@
 .main-block {
 	margin: 10vh 0 !important;
 }
+
+.side-by-side-modal {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.comparison-img {
+	height: 75vh;
+	margin: 0 20px;
+}
+.first-compare-image {
+	border-right: 2px solid gray;
+}

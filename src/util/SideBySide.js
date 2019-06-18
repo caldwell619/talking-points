@@ -14,26 +14,45 @@ const useStyles = makeStyles(theme => ({
 		boxShadow: theme.shadows[5],
 		padding: theme.spacing(4),
 		outline: 'none',
-		zIndex: 10000000000
+		zIndex: 10000000000,
+		width: '80%'
 	}
 }));
 
-const ImgPopout = ({ isPopupShown, handleClose, title, imageToShow, altText }) => {
+const SideBySide = props => {
+	const {
+		isSideBySideShown,
+		handleClose,
+		title,
+		sideBySideImg1,
+		sideBySideImg2,
+		altText1,
+		altText2
+	} = props;
 	const classes = useStyles();
 	return (
 		<div className="modal">
 			<Modal
 				aria-labelledby="simple-modal-title"
 				aria-describedby="simple-modal-description"
-				open={isPopupShown}
+				open={isSideBySideShown}
 				onClose={handleClose}
 			>
 				<div className={classes.paper}>
-					<Typography variant="h6" id="modal-title">
+					<Typography variant="h5" id="modal-title">
 						{title}
 					</Typography>
-					<div className="media-content">
-						<img src={imageToShow} alt={altText} className="modal-img" />
+					<div className="side-by-side-modal">
+						<div className="media-content">
+							<img
+								src={sideBySideImg1}
+								alt={altText1}
+								className="comparison-img first-compare-image"
+							/>
+						</div>
+						<div className="media-content">
+							<img src={sideBySideImg2} alt={altText2} className="comparison-img" />
+						</div>
 					</div>
 				</div>
 			</Modal>
@@ -41,12 +60,14 @@ const ImgPopout = ({ isPopupShown, handleClose, title, imageToShow, altText }) =
 	);
 };
 
-ImgPopout.prototype = {
-	isOpen: PropTypes.bool,
+SideBySide.prototype = {
+	isSideBySideShown: PropTypes.bool,
 	handleClose: PropTypes.func,
 	title: PropTypes.string,
-	imgSrc: PropTypes.element,
-	altText: PropTypes.string
+	sideBySideImg1: PropTypes.element,
+	sideBySideImg2: PropTypes.element,
+	altText1: PropTypes.string,
+	altText2: PropTypes.string
 };
 
-export default ImgPopout;
+export default SideBySide;

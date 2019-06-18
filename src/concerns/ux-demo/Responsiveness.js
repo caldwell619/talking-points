@@ -27,8 +27,8 @@ class Responsiveness extends Component {
 						The support for mobile is non existent.
 					</Typography>
 					<Typography variant="body1" className="bottom-spacer">
-						The argument could be made that there are only fixed values that
-						this application will be seen with. <br />
+						The argument could be made that there are only fixed values that this application will
+						be seen with. <br />
 						However, it makes more sense to be thourough.
 					</Typography>
 
@@ -42,9 +42,7 @@ class Responsiveness extends Component {
 							src={camera}
 							alt="bad media query"
 							height="300"
-							onClick={() =>
-								this.setState({ isPopoutShown: true, imageToShow: camera })
-							}
+							onClick={() => this.setState({ isPopoutShown: true, imageToShow: camera })}
 						/>
 						<img
 							src={confirmationPage}
@@ -82,9 +80,9 @@ class Responsiveness extends Component {
 					</div>
 				</div>
 				<ImgPopout
-					isOpen={this.state.isPopoutShown}
+					isPopupShown={this.state.isPopoutShown}
 					handleClose={this.handleClose}
-					imgSrc={this.state.imageToShow}
+					imageToShow={this.state.imageToShow}
 					altText="bad media query"
 					title="Improper Media Query"
 				/>

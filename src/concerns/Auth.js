@@ -1,11 +1,5 @@
 import React, { Fragment } from 'react';
-import {
-	Typography,
-	Divider,
-	List,
-	ListItemText,
-	ListItem
-} from '@material-ui/core';
+import { Typography, Divider, List, ListItemText, ListItem } from '@material-ui/core';
 import ImgPopout from '../util/ImgPopout';
 
 const Auth = () => (
@@ -15,8 +9,8 @@ const Auth = () => (
 				As it stands, there is no authentication being done in this application.
 			</Typography>
 			<Typography variant="body1" className="bottom-spacer">
-				Any form of auth is being done strictly from local storage. There is{' '}
-				<strong>NO</strong> way to log in on your own.
+				Any form of auth is being done strictly from local storage. There is <strong>NO</strong> way
+				to log in on your own.
 			</Typography>
 			<Typography variant="h6" className="spacer">
 				The Problem
@@ -25,23 +19,20 @@ const Auth = () => (
 				The way this application is structures is as follows:
 				<br />
 			</Typography>
-			<Typography variant="body1" className="">
+			<Typography variant="body1" component="div" className="">
 				<ul>
 					<li>
-						Users initially come to a splash page in which they are asked for an
-						email address
+						Users initially come to a splash page in which they are asked for an email address
 					</li>
 					<li>
-						Upon entering an email (could be <em>a@b.asaa</em> ), they are given
-						a token which grants access to several endpoints, including a
-						pass-through to Unity.
+						Upon entering an email (could be <em>a@b.asaa</em> ), they are given a token which
+						grants access to several endpoints, including a pass-through to Unity.
 					</li>
 					<li>
-						This token does expire, however, the UI is configured to
-						automatically refresh the token. It does this without prompt from
-						the user.
+						This token does expire, however, the UI is configured to automatically refresh the
+						token. It does this without prompt from the user.
 					</li>
-					<li>After getting this token, </li>
+					<li>After getting this token, near unrestricted access is granted.</li>
 					<li />
 					<li />
 				</ul>
@@ -50,9 +41,8 @@ const Auth = () => (
 				Potential Solutions
 			</Typography>
 			<Typography variant="body1" className="spacer bottom-spacer">
-				A clearer understanding of the Business Requriements is needed. We have
-				ideas about fixing what is in place, but if thats the intent, then we
-				don't need to fix anything.
+				A clearer understanding of the Business Requriements is needed. We have ideas about fixing
+				what is in place, but if thats the intent, then we don't need to fix anything.
 				<br />
 			</Typography>
 		</div>

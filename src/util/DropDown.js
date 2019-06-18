@@ -18,16 +18,14 @@ const DropDown = ({ title, content }) => {
 			>
 				<Typography>{title}</Typography>
 			</ExpansionPanelSummary>
-			<ExpansionPanelDetails>
-				<Typography>{content()}</Typography>
-			</ExpansionPanelDetails>
+			<ExpansionPanelDetails>{content()}</ExpansionPanelDetails>
 		</ExpansionPanel>
 	);
 };
 
 DropDown.propTypes = {
-  title: PropTypes.string,
-  content: PropTypes.func,
+	title: PropTypes.string,
+	content: PropTypes.func
 };
 
 export default DropDown;

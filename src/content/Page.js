@@ -12,7 +12,7 @@ const Page = ({ title, content }) => {
 					{title}
 				</Typography>
 				<Divider className="divider" />
-				<div>{content()}</div>
+				<div>{content}</div>
 				<div className="bottom-spacer" style={{ height: '60px' }} />
 			</div>
 			<div
@@ -35,7 +35,7 @@ const Page = ({ title, content }) => {
 
 Page.propTypes = {
 	title: PropTypes.string,
-	content: PropTypes.func
+	content: PropTypes.element
 };
 
 export default Page;
