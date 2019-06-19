@@ -7,9 +7,7 @@ import Router from './router/Router';
 class App extends Component {
 	async poke() {
 		try {
-			const res = await axios.get(
-				'/institution/INSTITUTION_ID'
-			);
+			const res = await axios.get('/api/test');
 			console.log(res);
 		} catch (error) {
 			console.log(error);

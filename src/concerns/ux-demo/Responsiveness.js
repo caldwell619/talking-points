@@ -7,10 +7,11 @@ const camera = require('../../assets/screen-shots/camera.png');
 const confirmationPage = require('../../assets/screen-shots/media-query-1.png');
 const nonLevel = require('../../assets/screen-shots/non-level-box.png');
 const viewHieght = require('../../assets/screen-shots/view-height-1.png');
+// make images into an array
+// loop over array
 
 class Responsiveness extends Component {
 	state = {
-		isVideoShown: false,
 		isPopoutShown: false,
 		imageToShow: ''
 	};

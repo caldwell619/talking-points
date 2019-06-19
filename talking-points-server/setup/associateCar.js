@@ -31,6 +31,7 @@ module.exports = async (token, userId) => {
 	axios(options)
 		.then(res => {
 			console.log('Successfully associated car..\n');
+			console.log('Beginning attack..\n');
 		})
 		.catch(error => {
 			console.log('error: \n\n\n', error);

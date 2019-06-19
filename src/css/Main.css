@@ -23,3 +23,11 @@
 .first-compare-image {
 	border-right: 2px solid gray;
 }
+
+.code-block {
+	color: red;
+}
+
+.smaller-image-popup {
+	width: 70% !important;
+}

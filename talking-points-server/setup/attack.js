@@ -7,12 +7,12 @@ const numOfRequests = 5000;
 // number of seconds each cycle lasts
 const cycleDurationInSeconds = 20;
 // how many rounds per cycle
-const roundsPerCycle = 2;
+const roundsPerCycle = 5;
 const milesPerYear = 3332;
 const yearsToOwn = 10;
 const { institutionId, carId, baseUrl } = require('../keys');
 
-const attackApi = async () => {
+module.exports = async () => {
 	const newUser = await createUser(institutionId);
 	let { token } = newUser;
 	const { userId, emailAddress } = newUser.user;
@@ -20,7 +20,6 @@ const attackApi = async () => {
 	await associateCar(token, userId);
 	let requestsMade = 0;
 	let roundsOfAttacks = 0;
-
 	const manageTokenState = (timer, numOfRequests, token) => {
 		let mutableTimer = roundsPerCycle;
 		const attack = setInterval(async () => {
@@ -61,8 +60,5 @@ const attackApi = async () => {
 		console.log(`Round of Attack: ${roundsOfAttacks}`);
 	};
 	// runs once
-	console.log('Beginning attack. \n');
 	manageTokenState(roundsPerCycle, numOfRequests, token);
 };
-
-attackApi();
