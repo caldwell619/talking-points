@@ -21,8 +21,10 @@ module.exports = async () => {
 	let requestsMade = 0;
 	let roundsOfAttacks = 0;
 	const manageTokenState = (timer, numOfRequests, token) => {
+		// creating a copy of the configurable timer
 		let mutableTimer = roundsPerCycle;
 		const attack = setInterval(async () => {
+			// if the timer hasnt ran out, attack and decrement the timer on an interval
 			if (mutableTimer > 0) {
 				executeRequestLoop(numOfRequests, token);
 				mutableTimer--;
@@ -38,20 +40,21 @@ module.exports = async () => {
 		}, cycleDurationInSeconds * 1000);
 	};
 	const executeRequestLoop = (requests, currentToken) => {
+		// configure the request
+		let options = {
+			method: 'post',
+			url: `${baseUrl}/${userId}/quote`,
+			headers: {
+				Authorization: currentToken,
+				'Content-Type': 'application/json'
+			},
+			data: {
+				carId,
+				milesPerYear,
+				yearsToOwn
+			}
+		};
 		while (requests > 0) {
-			let options = {
-				method: 'post',
-				url: `${baseUrl}/${userId}/quote`,
-				headers: {
-					Authorization: currentToken,
-					'Content-Type': 'application/json'
-				},
-				data: {
-					carId,
-					milesPerYear,
-					yearsToOwn
-				}
-			};
 			axios(options).catch(() => {});
 			requests--;
 			requestsMade++;
@@ -59,6 +62,6 @@ module.exports = async () => {
 		roundsOfAttacks++;
 		console.log(`Round of Attack: ${roundsOfAttacks}`);
 	};
-	// runs once
+	// runs once, starts a recursive loop of attack
 	manageTokenState(roundsPerCycle, numOfRequests, token);
 };

@@ -1,6 +1,9 @@
 'use strict';
 const axios = require('axios');
+// pulls the potentially sensitive info into the file
+// the same practice is used for api keys, passwords, etc
 const { baseUrl, vin } = require('../keys');
+// needed for the company api
 const flags = {
 	commercialUse: false,
 	certifiedPreowned: false,
@@ -19,6 +22,7 @@ module.exports = async (token, userId) => {
 	const options = {
 		method: 'post',
 		url: targetUrl,
+		// this is how the api knows I'm "legit" lol
 		headers: {
 			Authorization: token
 		},
@@ -28,6 +32,7 @@ module.exports = async (token, userId) => {
 			odometer
 		}
 	};
+	// sending an http request with the above configuration
 	axios(options)
 		.then(res => {
 			console.log('Successfully associated car..\n');

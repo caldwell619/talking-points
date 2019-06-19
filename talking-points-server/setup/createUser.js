@@ -2,7 +2,9 @@
 const axios = require('axios');
 const { baseUrl, password } = require('../keys');
 
+// random assortment of domains to ensure unique emails
 const domains = ['com', 'live', 'net', 'org', 'gov', 'aswew'];
+// generating a random email address
 const emailAddress = `${Math.random() * 12}@${Math.floor(Math.random() * 1200)}.${
 	domains[Math.floor(Math.random() * domains.length)]
 }`;
