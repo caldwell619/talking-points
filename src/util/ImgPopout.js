@@ -14,8 +14,7 @@ const useStyles = makeStyles(theme => ({
 		boxShadow: theme.shadows[5],
 		padding: theme.spacing(4),
 		outline: 'none',
-		zIndex: 10000000000,
-		width: '90%'
+		zIndex: 10000000000
 	}
 }));
 
@@ -33,8 +32,8 @@ const ImgPopout = ({ isPopupShown, handleClose, title, imageToShow, altText, opt
 					<Typography variant="h6" id="modal-title">
 						{title}
 					</Typography>
-					<div className={`media-content ${optionalClass}`}>
-						<img src={imageToShow} alt={altText} className="modal-img" style={{ width: '100%' }} />
+					<div className="media-content">
+						<img src={imageToShow} alt={altText} className={`modal-img ${optionalClass}`} />
 					</div>
 				</div>
 			</Modal>

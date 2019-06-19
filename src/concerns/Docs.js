@@ -5,8 +5,8 @@ import DropDown from '../util/DropDown';
 const Docs = () => (
 	<div>
 		<Typography variant="h6">
-			Our primary concern is that accepting a product that has broken Lambdas
-			accrues a great deal of technical debt.
+			We have recieved no documentation on any of the code, the intent, the business requirements,
+			etc
 		</Typography>
 		<Divider className="divider" />
 		<Typography variant="body1" className="bottom-spacer" />
@@ -14,23 +14,26 @@ const Docs = () => (
 			The Problem
 		</Typography>
 		<Typography variant="body1" className="spacer bottom-spacer">
-			By accepting Lambdas that are broken / unrelated to the product, you
-			assume technical debt that will require dev time to fix. <br />
-			Starting off the release with technical debt spells doom for the future.
-			<br />
+			Without a clear understanding of what the intent, functionality, or purpose is behind the
+			code, it is difficult to infer what may or may not be wrong. We have had to reverse engineer
+			this application and write our own documentation for the product provided by a 3rd party
+			vendor / consultant.
 		</Typography>
 		<Typography variant="h6" className="spacer">
 			Potential Solutions
 		</Typography>
 		<Typography variant="body1" className="spacer bottom-spacer">
-			Moving forward, the solution would be to prune the Lambdas that are not
-			relevant to the project, and fix the ones that are.
-			<br />
+			We have already started writing our own documentation, and writing tests based on the result.
+			Even just an open channel of communication with a source that has insight would be very
+			helpful
 		</Typography>
-		<div>
-			<Typography variant="h6">List of Lambdas</Typography>
-		</div>
-		<Divider className="divider" />
+		<Typography variant="h6" className="spacer">
+			Status of our Own Docs
+		</Typography>
+		<Typography variant="body1" className="spacer bottom-spacer">
+			We have mapped every available endpoint, given a sample response, sample request when
+			applicable, and documented the swagger configuration for each API Gateway endpoint.
+		</Typography>
 	</div>
 );
 

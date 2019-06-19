@@ -7,8 +7,7 @@ const camera = require('../../assets/screen-shots/camera.png');
 const confirmationPage = require('../../assets/screen-shots/media-query-1.png');
 const nonLevel = require('../../assets/screen-shots/non-level-box.png');
 const viewHieght = require('../../assets/screen-shots/view-height-1.png');
-// make images into an array
-// loop over array
+const images = [camera, confirmationPage, nonLevel, viewHieght];
 
 class Responsiveness extends Component {
 	state = {
@@ -39,45 +38,14 @@ class Responsiveness extends Component {
 						</Typography>
 					</div>
 					<div className="media-cont">
-						<img
-							src={camera}
-							alt="bad media query"
-							height="300"
-							onClick={() => this.setState({ isPopoutShown: true, imageToShow: camera })}
-						/>
-						<img
-							src={confirmationPage}
-							alt="bad media query"
-							height="300"
-							onClick={() =>
-								this.setState({
-									isPopoutShown: true,
-									imageToShow: confirmationPage
-								})
-							}
-						/>
-						<img
-							src={nonLevel}
-							alt="bad media query"
-							height="300"
-							onClick={() =>
-								this.setState({
-									isPopoutShown: true,
-									imageToShow: nonLevel
-								})
-							}
-						/>
-						<img
-							src={viewHieght}
-							alt="bad media query"
-							height="300"
-							onClick={() =>
-								this.setState({
-									isPopoutShown: true,
-									imageToShow: viewHieght
-								})
-							}
-						/>
+						{images.map(image => (
+							<img
+								src={image}
+								alt="bad media query"
+								height="200"
+								onClick={() => this.setState({ isPopoutShown: true, imageToShow: image })}
+							/>
+						))}
 					</div>
 				</div>
 				<ImgPopout

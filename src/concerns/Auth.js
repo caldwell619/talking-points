@@ -2,8 +2,12 @@ import React, { Fragment, Component } from 'react';
 import { Typography, Divider } from '@material-ui/core';
 import ImgPopout from '../util/ImgPopout';
 import ImageLayout from '../util/ImageLayout';
-const attackImage1 = require('../assets/screen-shots/attack-1.png');
-const imagesToDisplay = [attackImage1];
+const splunk1 = require('../assets/screen-shots/attack-1.png');
+const splunk2 = require('../assets/screen-shots/splunk_1.png');
+const splunk3 = require('../assets/screen-shots/splunk_2.png');
+const xray1 = require('../assets/screen-shots/x-ray_1.png');
+const xray2 = require('../assets/screen-shots/x-ray_2.png');
+const imagesToDisplay = [splunk1, splunk2, splunk3, xray1, xray2];
 
 class Auth extends Component {
 	state = {
@@ -75,7 +79,7 @@ class Auth extends Component {
 					imageToShow={this.state.imageToShow}
 					altText="bad media query"
 					title="Improper Media Query"
-					optionalClass=""
+					// optionalClass="wide-image"
 				/>
 			</Fragment>
 		);

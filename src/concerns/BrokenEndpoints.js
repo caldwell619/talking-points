@@ -25,7 +25,6 @@ const BrokenEndpoints = () => (
 		<Typography variant="body1" className="spacer bottom-spacer">
 			Moving forward, the solution would be to prune the Lambdas that are not relevant to the
 			project, and fix the ones that are.
-			<br />
 		</Typography>
 		<div>
 			<Typography variant="h6">List of Lambdas</Typography>

@@ -1,12 +1,13 @@
 import React from 'react';
 import { Typography, Divider } from '@material-ui/core';
 import DropDown from '../util/DropDown';
+import { strict } from 'assert';
 
 const Middleware = () => (
 	<div>
 		<Typography variant="h6">
-			Our primary concern is that accepting a product that has broken Lambdas
-			accrues a great deal of technical debt.
+			The very core of this application is wrapped in middleware. Helper functions that are designed
+			to be used in multiple places to shorten code length, and dev time.
 		</Typography>
 		<Divider className="divider" />
 		<Typography variant="body1" className="bottom-spacer" />
@@ -14,23 +15,29 @@ const Middleware = () => (
 			The Problem
 		</Typography>
 		<Typography variant="body1" className="spacer bottom-spacer">
-			By accepting Lambdas that are broken / unrelated to the product, you
-			assume technical debt that will require dev time to fix. <br />
-			Starting off the release with technical debt spells doom for the future.
+			All of these functions are abstractions, coupled with increased complexity.
 			<br />
+			<br />
+			Without any guidance, we would have to infer what these functions are doing. In some cases,
+			abstraction levels go 5 functions deep. The top layer calls a secondary layer, which then
+			calls a tertiary layer, etc.
+			<br />
+			<br />
+			This is a great deal of overhead, and increases time needed for maintance or revisions. The
+			biggest problem is that your introduce a{' '}
+			<strong className="code-block">single point of failure</strong>
 		</Typography>
 		<Typography variant="h6" className="spacer">
 			Potential Solutions
 		</Typography>
 		<Typography variant="body1" className="spacer bottom-spacer">
-			Moving forward, the solution would be to prune the Lambdas that are not
-			relevant to the project, and fix the ones that are.
+			At the very least, an basic understanding of the intent of each helper function. If we know
+			what they do, we can try to reason about fixing potential issues.
 			<br />
+			<br />
+			Lambdas should be completely independent micro services. Introducing this single point of
+			failure defeats the intent.
 		</Typography>
-		<div>
-			<Typography variant="h6">List of Lambdas</Typography>
-		</div>
-		<Divider className="divider" />
 	</div>
 );
 

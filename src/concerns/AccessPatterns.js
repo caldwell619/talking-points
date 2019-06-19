@@ -4,7 +4,9 @@ import { Typography, Divider } from '@material-ui/core';
 const AccessPatterns = () => (
 	<div>
 		<Typography variant="h6">
-			Our primary concern is using the <code>institutionId</code> as the partition key
+			Our primary concern is using the <code className="code-block">institutionId</code> as the
+			partition key. Once the product goes live, changes to the architecture cannot be made, and new
+			access patterns cannot be created.
 		</Typography>
 		<Divider className="divider" />
 		<Typography variant="body1" className="bottom-spacer">
@@ -15,7 +17,7 @@ const AccessPatterns = () => (
 		</Typography>
 		<Typography variant="body1" className="spacer bottom-spacer">
 			DynamoDb takes advantage of clusters. Clusters are separated stores of data that are
-			determined by your <strong>partition key</strong>.<br />
+			determined by your <strong className="code-block">partition key</strong>.<br />
 			The more similiar the keys, the more likely that they will be stored on the same partition.
 			<br />
 		</Typography>
@@ -56,14 +58,15 @@ const AccessPatterns = () => (
 			</blockquote>
 			<br />
 			<br />
-			This application today does <strong>not</strong> utilize secondary keys.
+			This application today does <strong className="code-block">not</strong> utilize secondary
+			keys.
 		</Typography>
 		<Typography variant="h6" className="spacer">
 			The Problem
 		</Typography>
 		<Typography variant="body1" className="block-text">
-			When using an <code>institutionId</code> to partition, you have a key that does not have
-			variation, which is a potential source of a performance slow down.
+			When using an <code className="code-block">institutionId</code> to partition, you have a key
+			that does not have variation, which is a potential source of a performance slow down.
 			<br />
 			<br />
 			The more popular one institution gets, the slower their performance will be, due to having to
@@ -82,12 +85,12 @@ const AccessPatterns = () => (
 			Potential Solution
 		</Typography>
 		<Typography variant="body1" className="block-text">
-			At this time, we need more clarification from the Business. Without a clear understanding of
-			the requirements, we cannot make an educated guess with any degree of accuracy.
+			Partition keys could be an email address used in conjuction with additional keys such as the
+			FI's ID.
 			<br />
 			<br />
-			With that said, partition keys could be an email address used in conjuction with additional
-			keys such as the FI's ID
+			Without a clear understanding of the access patterns, our best approach is to max our
+			resources available to use, that cannot be changed in the future.
 		</Typography>
 	</div>
 );

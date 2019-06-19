@@ -9,9 +9,8 @@ const Communication = () => (
 		</Typography>
 		<Divider className="divider" />
 		<Typography variant="body1" className="bottom-spacer">
-			We don't need an official document, just concrete words on what the
-			intended functionality of this application is, so we can collectively
-			brainstorm a solution.
+			We don't need an official document, just concrete words on what the intended functionality of
+			this application is, so we can collectively brainstorm a solution.
 		</Typography>
 		<Typography variant="h6" className="spacer">
 			The Problem
@@ -23,14 +22,9 @@ const Communication = () => (
 			Potential Solutions
 		</Typography>
 		<Typography variant="body1" className="spacer bottom-spacer">
-			Moving forward, the solution would be to prune the Lambdas that are not
-			relevant to the project, and fix the ones that are.
-			<br />
+			If clear guidelines cannot be given, we will do our best to infer what that might entail. This
+			will lead to crossed wires, and expectations potentially not being met
 		</Typography>
-		<div>
-			<Typography variant="h6">List of Lambdas</Typography>
-		</div>
-		<Divider className="divider" />
 	</div>
 );
 
