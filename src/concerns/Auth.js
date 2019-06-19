@@ -7,7 +7,8 @@ const splunk2 = require('../assets/screen-shots/splunk_1.png');
 const splunk3 = require('../assets/screen-shots/splunk_2.png');
 const xray1 = require('../assets/screen-shots/x-ray_1.png');
 const xray2 = require('../assets/screen-shots/x-ray_2.png');
-const imagesToDisplay = [splunk1, splunk2, splunk3, xray1, xray2];
+const xray3 = require('../assets/screen-shots/x-ray_3.png');
+const imagesToDisplay = [splunk1, splunk2, splunk3, xray1, xray2, xray3];
 
 class Auth extends Component {
 	state = {
