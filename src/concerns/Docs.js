@@ -32,7 +32,7 @@ const Docs = () => (
 		</Typography>
 		<Typography variant="body1" className="spacer bottom-spacer">
 			We have mapped every available endpoint, given a sample response, sample request when
-			applicable, and documented the swagger configuration for each API Gateway endpoint.
+			applicable, and documented the swagger configuration for each API Gateway endpoint.s
 		</Typography>
 	</div>
 );

@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import '../../css/Conerns.css';
 import PropTypes from 'prop-types';
-import { Typography } from '@material-ui/core';
+import { Typography, Divider } from '@material-ui/core';
 import ImgPopout from '../../util/ImgPopout';
 const camera = require('../../assets/screen-shots/camera.png');
 const confirmationPage = require('../../assets/screen-shots/media-query-1.png');
@@ -24,15 +24,10 @@ class Responsiveness extends Component {
 			<Fragment>
 				<div>
 					<Typography variant="h6" className="spacer">
-						The support for mobile is non existent.
+						Mobile first support is limited.
 					</Typography>
-					<Typography variant="body1" className="bottom-spacer">
-						The argument could be made that there are only fixed values that this application will
-						be seen with. <br />
-						However, it makes more sense to be thourough.
-					</Typography>
-
 					<div>
+						<Divider className="divider" />
 						<Typography variant="h6" className="bottom-spacer">
 							Examples
 						</Typography>

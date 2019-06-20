@@ -6,7 +6,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import InputValidation from './ux-demo/InputValidation';
-import ResetPassword from './ux-demo/ResetPassword';
+import NativeAlerts from './ux-demo/NativeAlerts';
 import Responsiveness from './ux-demo/Responsiveness';
 
 function TabContainer(props) {
@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
 	}
 }));
 
-export default function Ux() {
+export default function Ui() {
 	const classes = useStyles();
 	const [value, setValue] = React.useState(0);
 
@@ -48,30 +48,24 @@ export default function Ux() {
 					variant="scrollable"
 					scrollButtons="auto"
 				>
-					<Tab label="Reset Password" />
-					<Tab label="Resume Quote" />
-					<Tab label="Seeing Purchases" />
-					<Tab label="Editing Details" />
 					<Tab label="Input Validation" />
 					<Tab label="Responsiveness" />
+					<Tab label="Native Alerts" />
 				</Tabs>
 			</AppBar>
 			{value === 0 && (
 				<TabContainer>
-					<ResetPassword />
-				</TabContainer>
-			)}
-			{value === 1 && <TabContainer>Item Two</TabContainer>}
-			{value === 2 && <TabContainer>Item Three</TabContainer>}
-			{value === 3 && <TabContainer>Item Four</TabContainer>}
-			{value === 4 && (
-				<TabContainer>
 					<InputValidation />
 				</TabContainer>
 			)}
-			{value === 5 && (
+			{value === 1 && (
 				<TabContainer>
 					<Responsiveness />
+				</TabContainer>
+			)}
+			{value === 2 && (
+				<TabContainer>
+					<NativeAlerts />
 				</TabContainer>
 			)}
 		</div>

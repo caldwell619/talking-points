@@ -3,20 +3,20 @@ import { Switch, Route } from 'react-router-dom';
 import Page from '../content/Page';
 import AccessPatterns from '../concerns/AccessPatterns';
 import BrokenEndpoints from '../concerns/BrokenEndpoints';
-import Ux from '../concerns/Ux';
-import BusinessReqs from '../concerns/BusinessReqs';
+import Ui from '../concerns/Ui';
 import Auth from '../concerns/Auth';
 import Docs from '../concerns/Docs';
-import Communication from '../concerns/Communication';
 import Middleware from '../concerns/Middleware';
-import FollowThrough from '../concerns/follow-through/FollowThrough';
 import Main from '../content/Main';
 import '../css/Conerns.css';
 
 const Router = props => {
 	return (
 		<Switch>
-			<Route path="/auth" render={routeProps => <Page content={<Auth />} title="Auth Flow" />} />
+			<Route
+				path="/auth"
+				render={routeProps => <Page content={<Auth />} title="Service Availability" />}
+			/>
 			<Route
 				path="/middleware"
 				render={routeProps => (
@@ -29,25 +29,15 @@ const Router = props => {
 			/>
 			<Route
 				path="/broken"
-				render={routeProps => <Page content={<BrokenEndpoints />} title="Broken Lambdas" />}
-			/>
-			<Route
-				path="/comms"
-				render={routeProps => <Page content={<Communication />} title="Consistent Communication" />}
+				render={routeProps => <Page content={<BrokenEndpoints />} title="Legacy Code" />}
 			/>
 			<Route
 				path="/access"
 				render={routeProps => <Page content={<AccessPatterns />} title="Future Access Patterns" />}
 			/>
-			<Route
-				path="/business-needs"
-				render={routeProps => <Page content={<BusinessReqs />} title="Business Requirements" />}
-			/>
-			<Route path="/ux" render={routeProps => <Page content={<Ux />} title="UX Snags" />} />
-			<Route
-				path="/follow-through"
-				render={routeProps => <Page content={<FollowThrough />} title="Follow Through" />}
-			/>
+
+			<Route path="/ui" render={routeProps => <Page content={<Ui />} title="UI Improvements" />} />
+
 			<Route path="/" render={routeProps => <Main />} />
 		</Switch>
 	);

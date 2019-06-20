@@ -2,59 +2,46 @@ import React from 'react';
 import Person from '@material-ui/icons/Person';
 import Auth from '@material-ui/icons/Https';
 import Middleware from '@material-ui/icons/CompareArrows';
-import Money from '@material-ui/icons/AttachMoney';
 import Assignment from '@material-ui/icons/Assignment';
-import Phone from '@material-ui/icons/PhonelinkRing';
-import Cloud from '@material-ui/icons/CloudOutlined';
 import Build from '@material-ui/icons/Build';
-import CloudDone from '@material-ui/icons/CloudDone';
+import Key from '@material-ui/icons/VpnKey';
 
+export const uiRoutes = [
+	{
+		link: '/ui',
+		icon: <Person />,
+		linkText: 'User Interface'
+	}
+];
 export const topRoutes = [
 	{
-		link: '/auth',
-		icon: <Auth />,
-		linkText: 'Auth'
-	},
-	{
-		link: '/middleware',
-		icon: <Middleware />,
-		linkText: 'Middleware'
-	},
+		link: '/broken',
+		icon: <Build />,
+		linkText: 'Legacy Code'
+	}
+];
+export const bottomRoutes = [
 	{
 		link: '/docs',
 		icon: <Assignment />,
 		linkText: 'Documentation'
 	},
 	{
-		link: '/broken',
-		icon: <Build />,
-		linkText: 'Broken Endpoints'
-	},
-	{
-		link: '/comms',
-		icon: <Phone />,
-		linkText: 'Communication'
+		link: '/access',
+		icon: <Key />,
+		linkText: 'Data Flexibility'
 	}
 ];
-export const bottomRoutes = [
+
+export const extensibilityNestedRoutes = [
 	{
-		link: '/access',
-		icon: <Cloud />,
-		linkText: 'Access Patterns'
+		link: '/middleware',
+		icon: <Middleware />,
+		linkText: 'Middleware'
 	},
 	{
-		link: '/business-needs',
-		icon: <Money />,
-		linkText: 'Business Reqs'
-	},
-	{
-		link: '/ux',
-		icon: <Person />,
-		linkText: 'UX Concerns'
-	},
-	{
-		link: '/follow-through',
-		icon: <CloudDone />,
-		linkText: 'Follow Through'
+		link: '/auth',
+		icon: <Auth />,
+		linkText: 'Service Availibility'
 	}
 ];

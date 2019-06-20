@@ -4,12 +4,16 @@ import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
+import List from '@material-ui/core/List';
+import ListSubheader from '@material-ui/core/ListSubheader';
 import Divider from '@material-ui/core/Divider';
-import HeaderItem from './HeaderItem';
-import { topRoutes, bottomRoutes } from '../router/routes';
 import Home from '@material-ui/icons/Home';
+import Cloud from '@material-ui/icons/CloudOutlined';
+import HeaderItem from './HeaderItem';
+import { topRoutes, bottomRoutes, extensibilityNestedRoutes, uiRoutes } from '../router/routes';
+import NavListItems from './NavListItems';
+import NestedNavList from './NestedNavList';
 
 const drawerWidth = 240;
 
@@ -60,16 +64,34 @@ export default function Header() {
 				<div className={classes.toolbar} />
 				<HeaderItem link="/" linkText="Home" icon={<Home />} />
 				<Divider />
-				<List>
-					{topRoutes.map((route, index) => (
-						<HeaderItem key={index} {...route} />
-					))}
+				<List
+					component="nav"
+					aria-labelledby="nested-list-subheader"
+					subheader={
+						<ListSubheader component="div" id="nested-list-subheader">
+							Improve Now
+						</ListSubheader>
+					}
+				>
+					<NavListItems navItems={uiRoutes} />
+					<NestedNavList
+						primaryIcon={<Cloud />}
+						topLevelText="Extensibility"
+						nestedNavItems={extensibilityNestedRoutes}
+					/>
+					<NavListItems subheaderText="Improve Later" navItems={topRoutes} />
 				</List>
 				<Divider />
-				<List>
-					{bottomRoutes.map((route, index) => (
-						<HeaderItem key={index} {...route} />
-					))}
+				<List
+					component="nav"
+					aria-labelledby="nested-list-subheader"
+					subheader={
+						<ListSubheader component="div" id="nested-list-subheader">
+							Improve Later
+						</ListSubheader>
+					}
+				>
+					<NavListItems navItems={bottomRoutes} />
 				</List>
 			</Drawer>
 		</div>
