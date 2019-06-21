@@ -4,16 +4,15 @@ import { Typography, Divider } from '@material-ui/core';
 const AccessPatterns = () => (
 	<div>
 		<Typography variant="h6">
-			Our primary concern is using the <code className="code-block">institutionId</code> as the
-			partition key. Once the product goes live, changes to the architecture cannot be made, and new
-			access patterns cannot be created.
+			Using the <code className="code-block">institutionId</code> as the partition key could lead to
+			diminished performance.
+			<br /> Once the product goes live, changes to the architecture cannot be made, and new ways to
+			access seemingly relational data cannot be created without great effort.
 		</Typography>
 		<Divider className="divider" />
-		<Typography variant="body1" className="bottom-spacer">
-			The reason that this is a concern is because of how DynamoDb tables are separated or sharded.
-		</Typography>
+
 		<Typography variant="h6" className="spacer">
-			Brief, High Level Overview of How Data is Stored on DynamoDb
+			Brief, High Level Overview of How Data is Stored on DynamoDB
 		</Typography>
 		<Typography variant="body1" className="spacer bottom-spacer">
 			DynamoDb takes advantage of clusters. Clusters are separated stores of data that are
@@ -41,20 +40,22 @@ const AccessPatterns = () => (
 			>
 				Here
 			</a>
-			&nbsp; is another on the importance of understanding business concerns before moving forward
-			with your table design.
+			&nbsp; is another on the importance of{' '}
+			<span style={{ backgroundColor: 'yellow' }}>
+				understanding business concerns before moving forward with your table design.
+			</span>
 			<br />
 			<br />
 			The links go on to say{' '}
 			<blockquote>
-				It is also important that a high volume of queries not be focused on one part of the
+				"It is also important that a high volume of queries not be focused on one part of the
 				database, where they can exceed I/O capacity. Instead, you should design data keys to
-				distribute traffic evenly across partitions as much as possible, avoiding "hot spots."
+				distribute traffic evenly across partitions as much as possible, avoiding hot spots."
 			</blockquote>
 			and
 			<blockquote>
-				By creating specific global secondary indexes, you can enable different queries than your
-				main table can support, and that are still fast and relatively inexpensive.
+				"By creating specific global secondary indexes, you can enable different queries than your
+				main table can support, and that are still fast and relatively inexpensive."
 			</blockquote>
 			<br />
 			<br />
@@ -62,7 +63,7 @@ const AccessPatterns = () => (
 			keys.
 		</Typography>
 		<Typography variant="h6" className="spacer">
-			The Problem
+			Why This Needs Attention
 		</Typography>
 		<Typography variant="body1" className="block-text">
 			When using an <code className="code-block">institutionId</code> to partition, you have a key
@@ -79,18 +80,18 @@ const AccessPatterns = () => (
 			How it Impacts the Business
 		</Typography>
 		<Typography variant="body1" className="block-text">
-			A slow down in performance will lead to unhappiness at every level.
+			As one financial institution grows, their performance will diminish. This leads to their
+			eventual dissatisfaction, and a potential restructuring of the data.
 		</Typography>
 		<Typography variant="h6" className="spacer">
-			Potential Solution
+			Potential Improvemnets
 		</Typography>
 		<Typography variant="body1" className="block-text">
 			Partition keys could be an email address used in conjuction with additional keys such as the
 			FI's ID.
 			<br />
-			<br />
-			Without a clear understanding of the access patterns, our best approach is to max our
-			resources available to use, that cannot be changed in the future.
+			<br />A better understanding of the goals and purpose of this application would allow a better
+			alternative to be presented.
 		</Typography>
 	</div>
 );

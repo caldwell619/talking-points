@@ -1,10 +1,10 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Page from '../content/Page';
-import AccessPatterns from '../concerns/AccessPatterns';
-import BrokenEndpoints from '../concerns/BrokenEndpoints';
+import DataFlexibility from '../concerns/DataFlexibility';
+import LegacyCode from '../concerns/LegacyCode';
 import Ui from '../concerns/Ui';
-import Auth from '../concerns/Auth';
+import ServiceAvailability from '../concerns/ServiceAvailability';
 import Docs from '../concerns/Docs';
 import Middleware from '../concerns/Middleware';
 import Main from '../content/Main';
@@ -15,7 +15,9 @@ const Router = props => {
 		<Switch>
 			<Route
 				path="/auth"
-				render={routeProps => <Page content={<Auth />} title="Service Availability" />}
+				render={routeProps => (
+					<Page content={<ServiceAvailability />} title="Service Availability" />
+				)}
 			/>
 			<Route
 				path="/middleware"
@@ -29,11 +31,11 @@ const Router = props => {
 			/>
 			<Route
 				path="/broken"
-				render={routeProps => <Page content={<BrokenEndpoints />} title="Legacy Code" />}
+				render={routeProps => <Page content={<LegacyCode />} title="Legacy Code" />}
 			/>
 			<Route
 				path="/access"
-				render={routeProps => <Page content={<AccessPatterns />} title="Future Access Patterns" />}
+				render={routeProps => <Page content={<DataFlexibility />} title="Flexibility to Grow" />}
 			/>
 
 			<Route path="/ui" render={routeProps => <Page content={<Ui />} title="UI Improvements" />} />

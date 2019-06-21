@@ -8,7 +8,8 @@ const splunk3 = require('../assets/screen-shots/splunk_2.png');
 const xray1 = require('../assets/screen-shots/x-ray_1.png');
 const xray2 = require('../assets/screen-shots/x-ray_2.png');
 const xray3 = require('../assets/screen-shots/x-ray_3.png');
-const imagesToDisplay = [splunk1, splunk2, splunk3, xray1, xray2, xray3];
+const marketplaceImages = [splunk1, splunk2, splunk3];
+const awsImages = [xray1, xray2, xray3];
 
 class Auth extends Component {
 	state = {
@@ -24,19 +25,13 @@ class Auth extends Component {
 			<Fragment>
 				<div>
 					<Typography variant="h6">
-						As it stands, there is no authentication being done in this application.
-					</Typography>
-					<Typography variant="body1" className="bottom-spacer">
-						Any form of auth is being done strictly from local storage. There is{' '}
-						<strong className="code-block">NO</strong> way to log in on your own.
+						As it stands, There is <strong className="code-block">NO</strong> way to log in on your
+						own.
 					</Typography>
 					<Typography variant="h6" className="spacer">
-						The Problem
-					</Typography>
-					<Typography variant="body1" className="">
 						The way this application is structures is as follows:
-						<br />
 					</Typography>
+
 					<Typography variant="body1" component="div" className="">
 						<ul>
 							<li>
@@ -53,24 +48,44 @@ class Auth extends Component {
 							</li>
 							<li>After getting this token, near unrestricted access is granted.</li>
 							<li>
-								It opens up a tunnel straight to Unity, and by extension the 3rd party carriers.
+								It opens up a tunnel straight to Unity, Marketplace, any services running on the
+								same server, and by extension the 3rd party carriers.
 							</li>
 						</ul>
 					</Typography>
 					<Typography variant="h6" className="spacer">
-						Potential Solutions
+						Potential Impact on the Business
 					</Typography>
 					<Typography variant="body1" component="div" className="spacer bottom-spacer">
-						A clearer understanding of the Business Requriements is needed. We have ideas about
-						fixing what is in place, but if thats the intent, then we don't need to fix anything.
+						With this vector of attack, a denial of service could prevent users from accessing Buy
+						Now, Unity, Portal, and any other services on the server with Marketplace.
 						<br />
 					</Typography>
+					<Typography variant="h6" className="spacer">
+						Ways to Improve
+					</Typography>
+					<Typography variant="body1" component="div" className="spacer bottom-spacer">
+						As a minimal effort change, we can enforce a global rate limit AWS from sending more
+						than <em>X</em> amount of requests to Marketplace.
+						<br />
+						<br />
+						Another option is to track token use, and not send the request to Marketplace after{' '}
+						<em>X</em> amount of requests in a given time period.
+					</Typography>
 				</div>
-				<Typography variant="h6">Examples</Typography>
+				<Typography variant="h6">Requests made to AWS</Typography>
 				<Divider className="divider" />
 				<ImageLayout
 					imageHeight="100"
-					imagesToDisplay={imagesToDisplay}
+					imagesToDisplay={awsImages}
+					altText="attack proof"
+					setImageToDisplay={this.setImageToDisplay}
+				/>
+				<Typography variant="h6">Requests made to Marketplace from AWS</Typography>
+				<Divider className="divider" />
+				<ImageLayout
+					imageHeight="100"
+					imagesToDisplay={marketplaceImages}
 					altText="attack proof"
 					setImageToDisplay={this.setImageToDisplay}
 				/>

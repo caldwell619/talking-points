@@ -27,17 +27,17 @@ export const bottomRoutes = [
 		linkText: 'Documentation'
 	},
 	{
-		link: '/access',
-		icon: <Key />,
-		linkText: 'Data Flexibility'
+		link: '/middleware',
+		icon: <Middleware />,
+		linkText: 'Middleware'
 	}
 ];
 
 export const extensibilityNestedRoutes = [
 	{
-		link: '/middleware',
-		icon: <Middleware />,
-		linkText: 'Middleware'
+		link: '/access',
+		icon: <Key />,
+		linkText: 'Data Flexibility'
 	},
 	{
 		link: '/auth',

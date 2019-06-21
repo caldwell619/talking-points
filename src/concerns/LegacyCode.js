@@ -48,18 +48,19 @@ class BrokenEndpoints extends Component {
 			<Fragment>
 				<div>
 					<Typography variant="h6">
-						Our primary concern is that accepting a product that has broken Lambdas accrues a great
-						deal of technical debt.
+						Accepting a product that has unused and broken code accrues a great deal of technical
+						debt.
 					</Typography>
 					<Divider className="divider" />
 
 					<Typography variant="h6" className="spacer">
-						The Problem
+						Opportunity for Improvement
 					</Typography>
 					<Typography variant="body1" className="spacer bottom-spacer">
-						By accepting Lambdas that are broken / unrelated to the product, you assume technical
-						debt that will require dev time to fix. <br />
-						Starting off the release with technical debt spells doom for the future.
+						By accepting code that is broken / unrelated to the product, you assume technical debt
+						that will require dev time to fix. Time will need to be alloted to sort through what
+						should, and should not be there.
+						<br />
 						<br />
 						<Typography variant="body1" className="bottom-spacer">
 							Several ascpects of Bacon Loan Pay have been simply{' '}
@@ -72,21 +73,19 @@ class BrokenEndpoints extends Component {
 							into the architecture of this application.
 							<br />
 							<br />
-							This wouldn't be a problem, save for the fact this app is not using them. Increasing
-							the size of the application and resource consumption on AWS slows performance and
-							increases cost.
+							Having this unused duplication increases the size of the application. Resource
+							consumption on AWS slows performance and increases cost.
 							<br />
 						</Typography>
 					</Typography>
 					<Typography variant="h6" className="spacer">
-						Potential Solutions
+						Moving Forward
 					</Typography>
 					<Typography variant="body1" className="spacer bottom-spacer">
-						Moving forward, the solution would be to prune the Lambdas that are not relevant to the
-						project, and fix the ones that are.
+						Prune the code that is not relevant to the project, and fix the ones that are.
 					</Typography>
 					<div>
-						<Typography variant="h6">List of Lambdas</Typography>
+						<Typography variant="h6">List of Broken Functions</Typography>
 					</div>
 					<Divider className="divider" />
 					<div>
@@ -146,7 +145,7 @@ export default BrokenEndpoints;
 const compoundError =
 	"TypeError: Cannot read property 'authorization' of undefined at exports.handler(/var/task / index.js: 17: 31)";
 const passwordError =
-	'User: arn: aws: sts::988009383230: assumed - role / marketplace - development - r - UtilityGetBankInfoLambda - YJVR6PE85QRA / marketplace - development - lambda - UtilityGetBankInfo - 3LX7ERI7HXGN is not authorized to perform: secretsmanager: GetSecretValue on resource: arn: aws: secretsmanager: us - east - 1: 988009383230: secret: TokenAuthSecret - OIOr2d';
+	'User: lambda - UtilityGetBankInfo - 3LX7ERI7HXGN is not authorized to perform: secretsmanager: GetSecretValue on resource: arn: aws: secretsmanager:';
 const routingError =
 	"Lambda execution failed with status 200 due to customer function error: Handler 'handler' missing on module 'index'";
 const content = errorMessage => (

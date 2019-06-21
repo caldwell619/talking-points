@@ -38,13 +38,14 @@ function search() {
   then
   printf "\n$Red$(echo "Locations of $1")$Color_Off";
   printf "\n"
-    grep -r "$1" -w ../ \
+    grep -r "$1" -w . \
     --exclude-dir={scripts,node_modules,.git,build} | \
     cut -d':' -f1  
     failures+=("$1")
     pass=false
   else 
     printf "\n$Green$(echo 'Not Found')$Color_Off";
+    printf "\n";
   fi
 }
 
@@ -59,17 +60,14 @@ function quiet_search() {
   fi
 }
 
+printf "\n"
 if [ $quiet = true ] 
 then
 # Add as many search terms as you wish here
   quiet_search "var"
-  quiet_search "console.log"
-  quiet_search "/password"
 
 else
-  search "console.log"
-  search "var"
-  search "password"
+  search "solution"
   printf "\n"
 fi
 
