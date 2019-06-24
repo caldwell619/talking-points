@@ -84,7 +84,7 @@ const AccessPatterns = () => (
 			eventual dissatisfaction, and a potential restructuring of the data.
 		</Typography>
 		<Typography variant="h6" className="spacer">
-			Potential Improvemnets
+			Potential Improvements
 		</Typography>
 		<Typography variant="body1" className="block-text">
 			Partition keys could be an email address used in conjuction with additional keys such as the

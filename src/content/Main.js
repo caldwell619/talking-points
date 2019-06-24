@@ -11,15 +11,14 @@ const Main = ({}) => (
 		<Divider className="divider" />
 		<div className="main-body">
 			<Typography variant="h5" className="main-block">
-				Thank you for taking the time to listen to our concerns
+				Highlighting improvements for Buy Now
 			</Typography>
 			<Typography variant="h5" className="main-block">
-				On the left side, you'll find a list of categories that we feel need
-				addressing.
+				On the left side, you'll find a list of categories that we feel need addressing.
 			</Typography>
 		</div>
 		<div style={{ textAlign: 'right' }}>
-			<Link to="/auth">
+			<Link to="/ui">
 				<Button variant="contained" color="primary">
 					Get Started
 				</Button>
