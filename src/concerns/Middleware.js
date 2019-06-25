@@ -7,7 +7,26 @@ const Middleware = () => (
 			The very core of this application is wrapped in middleware.
 		</Typography>
 		<Divider className="divider" />
-		<Typography variant="body1" className="bottom-spacer" />
+		<Typography variant="body1" className="bottom-spacer">
+			An anti-pattern is:
+			<blockquote cite="https://www.simform.com/serverless-antipatterns/">
+				<em>
+					"... just like a pattern, except that instead of a solution it gives something that looks
+					superficially like a solution but isn’t one"
+				</em>
+				<footer>
+					—{' '}
+					<a
+						href="http://www.informit.com/authors/bio/50d7e43c-64d1-4200-916c-c8b29e712877"
+						target="_blank"
+						rel="noreferrer noopener"
+					>
+						Andrew Koenig
+					</a>
+				</footer>
+			</blockquote>
+			
+		</Typography>
 		<Typography variant="h6" className="spacer">
 			Why This Needs Attention
 		</Typography>
