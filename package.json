@@ -5,8 +5,9 @@
 	"proxy": "http://localhost:5000",
 	"scripts": {
 		"start": "react-scripts start",
-		"build": "rm -r build/ && react-scripts build",
-		"test": "react-scripts test"
+		"build": "rm -r build/ && GENERATE_SOURCEMAP=false react-scripts build",
+		"test": "react-scripts test",
+		"lint": "eslint"
 	},
 	"dependencies": {
 		"@material-ui/core": "^4.1.0",

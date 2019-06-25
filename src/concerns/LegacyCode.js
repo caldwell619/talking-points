@@ -63,7 +63,7 @@ class BrokenEndpoints extends Component {
 						<br />
 						<br />
 						<Typography variant="body1" className="bottom-spacer">
-							Several ascpects of Bacon Loan Pay have been simply{' '}
+							Several aspects of Bacon Loan Pay have been simply{' '}
 							<span
 								style={{ color: 'blue', cursor: 'pointer' }}
 								onClick={() => this.updateSideBySide()}

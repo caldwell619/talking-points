@@ -4,6 +4,7 @@ import Auth from '@material-ui/icons/Https';
 import Middleware from '@material-ui/icons/CompareArrows';
 import Assignment from '@material-ui/icons/Assignment';
 import Build from '@material-ui/icons/Build';
+import Money from '@material-ui/icons/AttachMoney';
 import Key from '@material-ui/icons/VpnKey';
 
 export const uiRoutes = [
@@ -11,6 +12,11 @@ export const uiRoutes = [
 		link: '/ui',
 		icon: <Person />,
 		linkText: 'User Interface'
+	},
+	{
+		link: '/mock-vin',
+		icon: <Money />,
+		linkText: 'Mock Vin'
 	}
 ];
 export const topRoutes = [

@@ -27,7 +27,7 @@ class NativeAlerts extends Component {
 						Every error message comes in the form of a native browser alert.
 					</Typography>
 					<Typography variant="body1" className="bottom-spacer">
-						Messages are ambigous, and the alert window cause disruptions to the User Experience.
+						Messages are ambiguous, and the alert window cause disruptions to the User Experience.
 					</Typography>
 					<div>
 						<Typography variant="h6" className="spacer">
@@ -51,7 +51,7 @@ class NativeAlerts extends Component {
 					{...this.state}
 					handleClose={this.handleClose}
 					altText="poor design"
-					title="Poor Design"
+					title="Ambiguous, Non-Standard Error Messages"
 				/>
 			</Fragment>
 		);

@@ -45,9 +45,9 @@ class InputValidation extends Component {
 						</Typography>
 					</div>
 					<div className="media-cont">
-						<video src={validate1} width="480" controls />;
-						<video src={validate2} width="480" controls />;
-						<video src={validate3} width="480" controls />
+						<video src={validate1} width="480" height="200" controls />;
+						<video src={validate2} width="480" height="200" controls />;
+						<video src={validate3} width="480" height="200" controls />
 					</div>
 					<Divider className="divider" />
 					<Typography variant="h6" className="bottom-spacer">

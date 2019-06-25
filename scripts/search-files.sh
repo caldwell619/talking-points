@@ -67,7 +67,7 @@ then
   quiet_search "var"
 
 else
-  search "solution"
+  search "ascpects"
   printf "\n"
 fi
 

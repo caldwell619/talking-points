@@ -5,6 +5,7 @@ import DataFlexibility from '../concerns/DataFlexibility';
 import LegacyCode from '../concerns/LegacyCode';
 import Ui from '../concerns/Ui';
 import ServiceAvailability from '../concerns/ServiceAvailability';
+import MockVin from '../concerns/MockVin';
 import Docs from '../concerns/Docs';
 import Middleware from '../concerns/Middleware';
 import Main from '../content/Main';
@@ -15,32 +16,29 @@ const Router = props => {
 		<Switch>
 			<Route
 				path="/auth"
-				render={routeProps => (
-					<Page content={<ServiceAvailability />} title="Service Availability" />
-				)}
+				render={() => <Page content={<ServiceAvailability />} title="Service Availability" />}
+			/>
+			<Route
+				path="/mock-vin"
+				render={() => <Page content={<MockVin />} title="Payments Going Through with a Mock Vin" />}
 			/>
 			<Route
 				path="/middleware"
-				render={routeProps => (
-					<Page content={<Middleware />} title="Middleware at a Foundational Level" />
-				)}
+				render={() => <Page content={<Middleware />} title="Middleware at a Foundational Level" />}
 			/>
 			<Route
 				path="/docs"
-				render={routeProps => <Page content={<Docs />} title="Existing Documentation" />}
+				render={() => <Page content={<Docs />} title="Existing Documentation" />}
 			/>
-			<Route
-				path="/broken"
-				render={routeProps => <Page content={<LegacyCode />} title="Legacy Code" />}
-			/>
+			<Route path="/broken" render={() => <Page content={<LegacyCode />} title="Legacy Code" />} />
 			<Route
 				path="/access"
-				render={routeProps => <Page content={<DataFlexibility />} title="Flexibility to Grow" />}
+				render={() => <Page content={<DataFlexibility />} title="Flexibility to Grow" />}
 			/>
 
-			<Route path="/ui" render={routeProps => <Page content={<Ui />} title="UI Improvements" />} />
+			<Route path="/ui" render={() => <Page content={<Ui />} title="UI Improvements" />} />
 
-			<Route path="/" render={routeProps => <Main />} />
+			<Route path="/" render={() => <Main />} />
 		</Switch>
 	);
 };
