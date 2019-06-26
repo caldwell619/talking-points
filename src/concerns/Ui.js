@@ -8,6 +8,8 @@ import Typography from '@material-ui/core/Typography';
 import InputValidation from './ux-demo/InputValidation';
 import NativeAlerts from './ux-demo/NativeAlerts';
 import Responsiveness from './ux-demo/Responsiveness';
+import UnsupportedBrowsers from './ux-demo/UnsupporterBrowsers';
+import WalkThrough from './ux-demo/WalkThrough';
 
 function TabContainer(props) {
 	return (
@@ -51,6 +53,8 @@ export default function Ui() {
 					<Tab label="Input Validation" />
 					<Tab label="Responsiveness" />
 					<Tab label="Native Alerts" />
+					<Tab label="Unsupported Browsers" />
+					<Tab label="Full Walk Through" />
 				</Tabs>
 			</AppBar>
 			{value === 0 && (
@@ -66,6 +70,16 @@ export default function Ui() {
 			{value === 2 && (
 				<TabContainer>
 					<NativeAlerts />
+				</TabContainer>
+			)}
+			{value === 3 && (
+				<TabContainer>
+					<UnsupportedBrowsers />
+				</TabContainer>
+			)}
+			{value === 4 && (
+				<TabContainer>
+					<WalkThrough />
 				</TabContainer>
 			)}
 		</div>

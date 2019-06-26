@@ -11,10 +11,9 @@ const Docs = () => (
 			Why This Warrants Attention
 		</Typography>
 		<Typography variant="body1" className="spacer bottom-spacer">
-			Without a clear understanding of what the intent, functionality, or purpose is behind the
-			code, it is difficult to infer what may or may not be wrong. We have had to reverse engineer
-			this application and write our own documentation for the product provided by a 3rd party
-			vendor / consultant.
+			We have had to reverse engineer this application and write our own documentation for the
+			product provided by a 3rd party vendor / consultant. Our assumptions and inferences could be
+			incorrect.
 		</Typography>
 		<Typography variant="h6" className="spacer">
 			Room for Improvement
@@ -28,8 +27,19 @@ const Docs = () => (
 			Status of our Own Docs
 		</Typography>
 		<Typography variant="body1" className="spacer bottom-spacer">
-			We have mapped every available endpoint, given a sample response, sample request when
-			applicable, and documented the swagger configuration for each API Gateway endpoint.s
+			We have started a collection of documentation based on the code provided.
+			<br />
+			<br />
+			<a href="https://google.com" target="_blank" rel="noreferrer noopener" className="blue-link">
+				Here
+			</a>{' '}
+			is a link to the progress we have made so far.
+			<ul>
+				<li>We have mapped every available endpoint</li>
+				<li>Presented the required fields of each request on AWS</li>
+				<li>Given a sample response, sample request when applicable</li>
+				<li>Documented the configuration for each API Gateway endpoint</li>
+			</ul>
 		</Typography>
 	</div>
 );

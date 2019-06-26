@@ -44,12 +44,12 @@ class Auth extends Component {
 							</li>
 							<li>
 								This token does expire, however, the UI is configured to automatically refresh the
-								token. It does this without prompt from the user.
+								token after 4 minutes. It does this without prompt from the user.
 							</li>
 							<li>After getting this token, near unrestricted access is granted.</li>
 							<li>
-								It opens up a tunnel straight to Unity, Marketplace, any services running on the
-								same server, and by extension the 3rd party carriers.
+								It opens up a tunnel straight to Marketplace, any services running on the same
+								server, and by extension the 3rd party carriers.
 							</li>
 						</ul>
 					</Typography>

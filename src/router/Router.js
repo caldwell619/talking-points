@@ -8,7 +8,9 @@ import ServiceAvailability from '../concerns/ServiceAvailability';
 import MockVin from '../concerns/MockVin';
 import Docs from '../concerns/Docs';
 import Middleware from '../concerns/Middleware';
+import Ocr from '../concerns/Ocr';
 import Main from '../content/Main';
+
 import '../css/Conerns.css';
 
 const Router = props => {
@@ -17,6 +19,10 @@ const Router = props => {
 			<Route
 				path="/auth"
 				render={() => <Page content={<ServiceAvailability />} title="Service Availability" />}
+			/>
+			<Route
+				path="/ocr"
+				render={() => <Page content={<Ocr />} title="Limits of the Image Recognition" />}
 			/>
 			<Route
 				path="/mock-vin"

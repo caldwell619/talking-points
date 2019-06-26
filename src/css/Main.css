@@ -27,8 +27,3 @@
 .code-block {
 	color: red;
 }
-
-.nested-nav-top,
-.nested-nav-top > div {
-	/* padding-top: 0 !important; */
-}

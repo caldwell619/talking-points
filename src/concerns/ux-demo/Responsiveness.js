@@ -1,13 +1,12 @@
 import React, { Component, Fragment } from 'react';
 import '../../css/Conerns.css';
-import PropTypes from 'prop-types';
 import { Typography, Divider } from '@material-ui/core';
 import ImgPopout from '../../util/ImgPopout';
 const camera = require('../../assets/screen-shots/camera.png');
 const confirmationPage = require('../../assets/screen-shots/media-query-1.png');
 const nonLevel = require('../../assets/screen-shots/non-level-box.png');
-const viewHieght = require('../../assets/screen-shots/view-height-1.png');
-const images = [camera, confirmationPage, nonLevel, viewHieght];
+const viewHeight = require('../../assets/screen-shots/view-height-1.png');
+const images = [camera, confirmationPage, nonLevel, viewHeight];
 
 class Responsiveness extends Component {
 	state = {
@@ -55,5 +54,4 @@ class Responsiveness extends Component {
 	}
 }
 
-Responsiveness.propTypes = {};
 export default Responsiveness;

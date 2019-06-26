@@ -6,6 +6,7 @@ import Assignment from '@material-ui/icons/Assignment';
 import Build from '@material-ui/icons/Build';
 import Money from '@material-ui/icons/AttachMoney';
 import Key from '@material-ui/icons/VpnKey';
+import Camera from '@material-ui/icons/CameraAlt';
 
 export const uiRoutes = [
 	{
@@ -14,9 +15,14 @@ export const uiRoutes = [
 		linkText: 'User Interface'
 	},
 	{
+		link: '/ocr',
+		icon: <Camera />,
+		linkText: 'Vin as Picture'
+	},
+	{
 		link: '/mock-vin',
 		icon: <Money />,
-		linkText: 'Mock Vin'
+		linkText: 'Policy Failure'
 	}
 ];
 export const topRoutes = [
@@ -28,14 +34,14 @@ export const topRoutes = [
 ];
 export const bottomRoutes = [
 	{
-		link: '/docs',
-		icon: <Assignment />,
-		linkText: 'Documentation'
-	},
-	{
 		link: '/middleware',
 		icon: <Middleware />,
 		linkText: 'Middleware'
+	},
+	{
+		link: '/docs',
+		icon: <Assignment />,
+		linkText: 'Documentation'
 	}
 ];
 

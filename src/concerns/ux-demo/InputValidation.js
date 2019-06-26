@@ -2,11 +2,12 @@ import React, { Component, Fragment } from 'react';
 import '../../css/Conerns.css';
 import { Typography, Divider } from '@material-ui/core';
 import ImgPopout from '../../util/ImgPopout';
-const validate1 = require('../../assets/videos/validate-1.mov');
-const validate2 = require('../../assets/videos/validate-2.mov');
-const validate3 = require('../../assets/videos/validate-3.mov');
-const inputImage1 = require('../../assets/screen-shots/empty_43.png');
-const emptyFileCollection = [inputImage1];
+import validate2 from '../../assets/videos/validate-2.mov';
+import validate1 from '../../assets/videos/validate-1.mov';
+import validate3 from '../../assets/videos/validate-3.mov';
+import inputImage1 from '../../assets/screen-shots/empty_43.png';
+import failedZipCode from '../../assets/screen-shots/invalid-input_1.png';
+const emptyFileCollection = [inputImage1, failedZipCode];
 
 class InputValidation extends Component {
 	state = {
@@ -51,7 +52,7 @@ class InputValidation extends Component {
 					</div>
 					<Divider className="divider" />
 					<Typography variant="h6" className="bottom-spacer">
-						Images
+						Screen Shots
 					</Typography>
 					<div className="media-cont">
 						{emptyFileCollection.map((image, index) => (
@@ -69,7 +70,7 @@ class InputValidation extends Component {
 					{...this.state}
 					handleClose={this.handleClose}
 					altText="poor design"
-					title="Poor Design"
+					title="Request Sent with Empty Input"
 				/>
 			</Fragment>
 		);

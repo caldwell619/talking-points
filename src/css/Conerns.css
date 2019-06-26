@@ -7,13 +7,15 @@
 .block-text {
 	width: 100%;
 }
-.media-cont {
+.media-cont,
+.non-click-media-cont {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
 }
 .media-cont video,
-.media-cont img {
+.media-cont img,
+.non-click-media-cont img {
 	margin: 15px;
 }
 

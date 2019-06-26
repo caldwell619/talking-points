@@ -1,5 +1,7 @@
 import React from 'react';
 import { Typography, Divider } from '@material-ui/core';
+import dynamoDocs1 from '../assets/screen-shots/dynamo-docs-1.png';
+import dynamoDocs2 from '../assets/screen-shots/dynamo-docs-2.png';
 
 const AccessPatterns = () => (
 	<div>
@@ -25,11 +27,11 @@ const AccessPatterns = () => (
 				href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/bp-partition-key-uniform-load.html"
 				target="_blank"
 				rel="noopener noreferrer"
-				style={{ color: 'blue' }}
+				className="blue-link"
 			>
 				Here
-			</a>
-			&nbsp; is a link on best practices when choosing a key.
+			</a>{' '}
+			is a link on best practices when choosing a key.
 			<br />
 			<br />
 			<a
@@ -46,21 +48,18 @@ const AccessPatterns = () => (
 			</span>
 			<br />
 			<br />
-			The links go on to say{' '}
-			<blockquote>
-				"It is also important that a high volume of queries not be focused on one part of the
-				database, where they can exceed I/O capacity. Instead, you should design data keys to
-				distribute traffic evenly across partitions as much as possible, avoiding hot spots."
-			</blockquote>
-			and
-			<blockquote>
-				"By creating specific global secondary indexes, you can enable different queries than your
-				main table can support, and that are still fast and relatively inexpensive."
-			</blockquote>
+			<div className="bottom-spacer">The links go on to say</div>
+			<img height="250" src={dynamoDocs1} alt="dynanmo docs" />
 			<br />
 			<br />
-			This application today does <strong className="code-block">not</strong> utilize secondary
-			keys.
+			<div className="bottom-spacer">The AWS Docs go on to say</div>
+			<div>
+				<img height="50" src={dynamoDocs2} alt="dynanmo docs" />
+			</div>
+			<div>
+				This application today does <strong className="code-block">not</strong> utilize secondary
+				keys.
+			</div>
 		</Typography>
 		<Typography variant="h6" className="spacer">
 			Why This Needs Attention

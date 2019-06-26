@@ -9,7 +9,7 @@
 
 ## Data Flexibility
 
-- Make aws docs quotes into a screen shot
+- [x] Make aws docs quotes into a screen shot
 
 ## User Interface
 
